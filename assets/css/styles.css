@@ -1,0 +1,217 @@
+:root {
+  --primary-color: #af0caf;
+  --background-color: #282121;
+  --text-color: #f0ebeb;
+  --hover-color: #9b039b;
+}
+
+/* Global Styles */
+body {
+  text-align: center;
+  font-family: 'Times New Roman', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; 
+}
+
+/* Navigation */
+nav {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Section Styling */
+section {
+  padding: 20px;
+}
+
+section h2 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+section p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Portfolio Images */
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row */
+  justify-content: center; /* Centers items horizontally */
+  gap: 20px; /* Adds spacing between items */
+}
+
+.portfolio-image {
+  flex: 0 1 calc(33.33% - 20px); /* Ensures 3 items per row and adjusts for gap */
+  margin-bottom: 20px;
+  text-align: center; /* Centers the text under each image */
+  opacity: 20%;
+}
+.portfolio-image:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+  transition: opacity 0.5s;
+  transition: transform 0.5s;
+  
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  opacity: 20%;
+  border-radius: 8px; /* Curves the image corners */
+}
+.portfolio-image img:hover {
+  opacity: 100%;
+  transform: scale(1.05);
+  transition: opacity 0.5s;
+  transition: transform 0.5s;
+}
+
+.portfolio-description {
+  color: #f0ebeb; /* Matches your color scheme */
+  font-size: 14px; /* Adjust font size as needed */
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Responsive Images */
+@media (max-width: 768px) {
+  .portfolio-image {
+      width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+span.brandon-text {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+/* Contact Section */
+#contact label {
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Skills and Hobbies */
+.skills-list,
+.hobbies-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li,
+.hobbies-list li {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  opacity: 50%;
+}
+.skills-list li:hover,
+.hobbies-list li:hover {
+  border-radius: 20px;
+  transform: scale(1.04);
+  opacity: 100%;
+  transition: opacity 0.5s;
+  transition: border-radius 0.5s;
+  transition: transform 0.5s;
+}
+
+/* Social Media Links */
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.social-link:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+  transition: scale 0.5s;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Animation */
+.faded {
+  animation: faded 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+@keyframes faded {
+  0% {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
